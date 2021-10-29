@@ -8,6 +8,10 @@ if len( sys.argv ) < 4:
   print( 'Usage: ' + sys.argv[ 0 ] + ' input_dir train_coeff test_coeff' )
   sys.exit( 1 )
 # end if
+print(sys.argv[0])
+print(sys.argv[1])
+print(sys.argv[2])
+print(sys.argv[3])
 train_coeff = float( sys.argv[ 2 ] )
 test_coeff = float( sys.argv[ 3 ] )
 
@@ -33,6 +37,8 @@ for d in next( os.walk( sys.argv[ 1 ] ) )[ 1 ]:
   numpy.savetxt( os.path.join( sys.argv[ 1 ], d + '_val.csv' ), val_d )
   
   l += 1
+
+  print(d)
 # end for
 
 
